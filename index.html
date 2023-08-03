@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery in javascript</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js":></script>
+
+<script>
+    $(document).ready(function(){
+
+        $("#hide").click(function(){
+            $("p").hide();
+        });
+        $("#show").dblclick(function(){
+            $("p").show();
+        });
+        $("#p1").mouseenter(function(){
+        alert("This is mouseenter Effect p1!");
+         });
+         $("#p1").mouseleave(function(){
+         alert("This is mouseleaving Effect p1!");
+        });
+        $("#p1").mousedown(function(){
+            alert("This is mousedown Effect p1!");
+        });
+        $("#p2").mouseup(function(){
+            alert("This is mouseup Effect!!");
+        });
+        $("#p1").hover(function(){
+         alert(" You Entered into p1!");
+          },
+           function(){
+          alert("Bye! You now leave p1!");
+         });
+        $("#p1").toggle(function(){
+            $("p").toggle();
+        });
+        $("input").focus(function(){
+         $(this).css("background-color", "yellow");
+        });
+        $("input").blur(function(){
+         $(this).css("background-color", "blue");
+        })
+    });
+       
+
+</script>
+
+</head>
+
+<body>
+
+    <h1>Jquery Events</h1>
+
+    <p id="p1"> The Effect Of Event in Query Selector</p>
+
+    <p id="p2">It is mouseup effect</p>
+
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+
+  <div style="margin-top: 20px;">
+    Name: <input type="text" name="Fullname"><br>
+    PH no: <input type="text" name="mobile number">
+
+  </div>
+   
+</body>
+</html>
